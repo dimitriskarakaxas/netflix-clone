@@ -19,7 +19,7 @@ button {
     display: flex;
     flex-direction: column;
     background: #000 url("https://occ-0-3633-2706.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABZeP9pSR2QoF8yCWWsV6i9IPx7lGzd1UHYpQADXbzclMMm8u4OtcTTfd-JGrDtPJ6scyuOin30EgS1P0EqBbQ3GGGssE.jpg?r=19b") no-repeat center center/cover;
-	height: 50vw;
+	height: 55vw;
     justify-content: center;
     color: #fff;	
 }
@@ -27,42 +27,41 @@ button {
 .featured__title {
     font-size: 5vw;
     text-transform: uppercase;
-    width: 40%;
-	text-align: center;
+    text-align: center;
+    width: min-content;
 	letter-spacing: 12px;
 	line-height: 0.9
 }
 
-.featured__title span {
-    display: block;
-    
-}
 
 .featured__description {
-    width: 40%;
+    width: 41%;
 	font-size: 1.5vw;
     margin: 1.1rem 0;
     line-height: 1.35;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.45);
 }
 
 
 .featured-bottoms {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .left-btns button{
-    padding: 8px 20px;
+    padding: 0.5vw 1.2vw;
     border: none;
     outline: none;
-    border-radius: 3px;
+    border-radius: 4px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1vw;
 }
 
 .play{
     background: #fff;
     color: #000;
+    margin-right: 10px;
 }
 
 .play:hover {
@@ -87,18 +86,19 @@ button {
     padding: .5vw 3.5vw .5vw .8vw;
     font-size: 1.1vw;
 	height: 2.4vw;
-				border-left:3px solid #dcdcdc;
-				margin-left:10px
+	border-left:3px solid #dcdcdc;
+	margin-left:10px
 }
 
 .repeat {
     border: none;
     outline: none;
-    padding: 0.5rem;
+    padding: 0.8rem;
     color: #dcdcdc;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 50%;
+    font-size: 1vw;
 }
 
 .repeat:hover{
@@ -115,5 +115,5 @@ button {
    /////////////// */
 
 .spacing-left{
-	margin-left: 1.6875rem;
+	padding-left: 3vw;
 }

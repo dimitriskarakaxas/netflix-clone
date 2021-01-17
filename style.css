@@ -1,3 +1,5 @@
+/********** Generic Styles **********/
+
 *{
 	margin:0;
 	padding: 0;
@@ -6,20 +8,101 @@
 
 body {
     font-family: Helvetica, sans-serif;
+    background: #141414;
+}
+
+a {
+    text-decoration: none;
 }
 
 button {
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 
-/**********  Featured Section  **********/
+/********** Start Header Section **********/
+
+
+.logo{
+
+    width:100px;
+}
+
+header{
+    display:flex;
+    align-items: center;
+    background: rgb(20, 20, 20, 0.3);
+    height:68px; /* review */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+ul li{
+    margin-right:1rem
+}
+
+.main-menu {
+    margin-left: 2rem;
+    
+}
+
+.main-menu a {
+    color: #e5e5e5;
+    transition: color 0.4s;
+    
+}
+
+.main-menu a:hover {
+    color: #b3b3b3;
+}
+
+.main-menu .main-menu__item .active{
+    color: #fff;
+    cursor: default;
+}
+
+
+.secondary-menu {
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2.75vw;
+    color: #fff;
+}
+
+.secondary-menu__item {
+    margin-left: 1.15rem;
+}
+
+.secondary-menu button {
+    font-size: 1.2rem;
+    background: transparent;
+    color: inherit;
+    
+}
+
+.secondary-menu a {
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+
+/********** Start Featured Section  **********/
 
 .featured {
     display: flex;
     flex-direction: column;
     background: #000 url("https://occ-0-3633-2706.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABZeP9pSR2QoF8yCWWsV6i9IPx7lGzd1UHYpQADXbzclMMm8u4OtcTTfd-JGrDtPJ6scyuOin30EgS1P0EqBbQ3GGGssE.jpg?r=19b") no-repeat center center/cover;
-	height: 55vw;
+	height: 50vw;
     justify-content: center;
     color: #fff;	
 }
@@ -51,8 +134,6 @@ button {
 
 .left-btns button{
     padding: 0.5vw 1.2vw;
-    border: none;
-    outline: none;
     border-radius: 4px;
     font-weight: 700;
     font-size: 1vw;
@@ -115,5 +196,5 @@ button {
    /////////////// */
 
 .spacing-left{
-	padding-left: 3vw;
+	padding-left: 2.75vw;
 }

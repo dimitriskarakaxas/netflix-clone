@@ -36,11 +36,12 @@ button {
 header {
   display: flex;
   align-items: center;
-  background: rgb(20, 20, 20, 0.3);
+  background: rgb(20, 20, 20, 0.1);
   height: 68px; /* review */
   position: fixed;
   top: 0;
   width: 100%;
+  transition: background 0.5s;
 }
 
 ul {

@@ -41,7 +41,8 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  transition: background 0.5s;
+  transition: background 0.4s 0.15s;
+  z-index: 15;
 }
 
 ul {
@@ -106,6 +107,45 @@ ul li {
   height: 50vw;
   justify-content: center;
   color: #fff;
+  position: relative;
+}
+
+.featured::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/********** Fixing .featured::before+::after problems **********/
+
+.featured__title,
+.featured__description,
+.featured-bottoms,
+.my-list {
+  z-index: 5;
+}
+
+.my-list {
+  position: relative;
+}
+
+.featured::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6vw;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
 }
 
 .featured__title {

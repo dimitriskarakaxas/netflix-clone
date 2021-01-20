@@ -112,13 +112,19 @@ ul {
   position: relative;
 }
 
-.dropdown-content {
+.dropdown-container {
   position: absolute;
-  display: none;
-  background: #000;
-  right: 0;
   top: 100%;
-  margin-top: 13px;
+  right: 0;
+  padding-top: 13px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s ease;
+}
+
+.dropdown-content {
+  position: relative;
+  background: #000;
   width: 175px;
   border: 1px solid rgb(100, 100, 100);
 }
@@ -167,8 +173,9 @@ ul {
   border-color: transparent transparent #fff transparent;
 }
 
-.profile-icon:hover .dropdown-content {
-  display: block;
+.profile-icon:hover .dropdown-container {
+  visibility: visible;
+  opacity: 1;
 }
 
 /********** Start Featured Section  **********/

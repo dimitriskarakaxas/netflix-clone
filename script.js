@@ -1,12 +1,12 @@
 const navigation = document.getElementById("navigation");
 
-
-
 window.addEventListener("scroll", () => {
     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+      navigation.style.transition = "background 0.15s";
       navigation.style.background = "rgba(20, 20, 20, 1)";
     } else {
-		  navigation.style.background = "rgba(20, 20, 20, 0.1)";
+      navigation.style.transition = "background 0.4s 0.15s";
+      navigation.style.background = "rgba(20, 20, 20, 0.1)";
     }
 });
 
@@ -33,18 +33,3 @@ function addMovies(movies) {
     tvShowsEl.innerHTML += html;
   });
 }
-
-// showMovies = (movies, element_selector, path_type ) => {
-//   var moviesEl = document.querySelector(element_selector);
-//   for(var movie of movies.results){
-//       var imageElement = document.createElement('img');
-//       imageElement.setAttribute('data-id', movie.id);
-
-//       imageElement.src = `https://image.tmdb.org/t/p/original${movie[path_type]}`;
-      
-//       imageElement.addEventListener('click', (e)=>{
-//           handleMovieSelection(e); 
-//       });
-//       moviesEl.appendChild(imageElement);
-//   }
-// }

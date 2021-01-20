@@ -19,6 +19,7 @@ h2 {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 button {
@@ -41,20 +42,20 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  transition: background 0.4s 0.15s;
+  /* transition: background 0.4s 0.15s; adding with js */
   z-index: 15;
 }
 
 ul {
   list-style-type: none;
-  display: flex;
 }
 
-ul li {
+.main-menu__item {
   margin-right: 1rem;
 }
 
 .main-menu {
+  display: flex;
   margin-left: 2rem;
 }
 
@@ -69,10 +70,12 @@ ul li {
 
 .main-menu .main-menu__item .active {
   color: #fff;
+  font-weight: 700;
   cursor: default;
 }
 
 .secondary-menu {
+  display: flex;
   flex: 1;
   justify-content: flex-end;
   align-items: center;
@@ -81,7 +84,7 @@ ul li {
 }
 
 .secondary-menu__item {
-  margin-left: 1.15rem;
+  margin-left: 1.75rem;
 }
 
 .secondary-menu button {
@@ -90,10 +93,82 @@ ul li {
   color: inherit;
 }
 
-.secondary-menu a {
+.kids {
   color: inherit;
   text-transform: uppercase;
   font-size: 0.9rem;
+}
+
+.secondary-menu__item i {
+  font-size: 22px;
+}
+
+.secondary-menu__item img {
+  border-radius: 4px;
+}
+
+/* Dropdowns */
+.profile-icon {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  background: #000;
+  right: 0;
+  top: 100%;
+  margin-top: 13px;
+  width: 175px;
+  border: 1px solid rgb(100, 100, 100);
+}
+
+.dropdown-content li {
+  margin-bottom: 14px;
+}
+
+.profiles,
+.account {
+  padding: 15px 15px 0;
+}
+
+.profiles {
+  border-bottom: 1px solid rgb(100, 100, 100);
+}
+
+.profiles {
+  font-size: 0.85rem;
+}
+
+.profiles li:last-child {
+  margin-bottom: 20px;
+}
+
+.account {
+  font-size: 0.775rem;
+  font-weight: 700;
+}
+
+.account li:first-child {
+  margin-top: 5px;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: -18px;
+  border-width: 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.profile-icon:hover .dropdown-content {
+  display: block;
 }
 
 /********** Start Featured Section  **********/
@@ -112,7 +187,11 @@ ul li {
 
 .featured::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    77deg,
+    rgba(0, 0, 0, 0.6) 0,
+    rgba(0, 0, 0, 0) 85%
+  );
   position: absolute;
   top: 0;
   bottom: 0;

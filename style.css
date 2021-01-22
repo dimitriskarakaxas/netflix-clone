@@ -144,7 +144,7 @@ ul {
 
 .dropdown-content {
   position: relative;
-  background: #000;
+  background: rgba(0, 0, 0, 0.85);
   width: 175px;
   border: 1px solid rgb(100, 100, 100);
 }
@@ -159,11 +159,8 @@ ul {
 }
 
 .profiles {
-  border-bottom: 1px solid rgb(100, 100, 100);
-}
-
-.profiles {
   font-size: 0.85rem;
+  border-bottom: 1px solid rgb(100, 100, 100);
 }
 
 .profiles li:last-child {
@@ -186,7 +183,7 @@ ul {
 .dropdown-content::before {
   content: "";
   position: absolute;
-  right: 6px;
+  right: 12px;
   top: -18px;
   border-width: 8px 8px;
   border-style: solid;

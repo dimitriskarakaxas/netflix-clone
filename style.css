@@ -195,6 +195,16 @@ ul {
   opacity: 1;
 }
 
+@media (max-width:1200px){
+  .main-menu__item{
+    font-size:0.7rem;
+  }
+
+  .secondary-menu__item i {
+    font-size: 16px;
+  }
+}
+
 /********** Start Featured Section  **********/
 
 .featured {

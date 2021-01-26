@@ -1,6 +1,6 @@
 <p>
     <h1 align="center">Netflix-Clone</h1>
-    <img src="https://github.com/dimitriskarakaxas/netflix-clone/blob/main/assets/netflix-clone__wallpaper.png">
+    <a href="https://dimitriskarakaxas.github.io/netflix-clone/"><img src="https://github.com/dimitriskarakaxas/netflix-clone/blob/main/assets/netflix-clone__wallpaper.png"></a>
 </p>
 
 ## About The Project
@@ -11,8 +11,8 @@ This project is the **Front-end** of the *NETFLIX*. We try to make it as much as
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-### You can view the demo live without downloading all the code
-Click [here](https://dimitriskarakaxas.github.io/netflix-clone/ "Netfix Clone")
+#### You can view the Demo Live!
+Click **[here](https://dimitriskarakaxas.github.io/netflix-clone/ "Netfix Clone")**
 
 
 

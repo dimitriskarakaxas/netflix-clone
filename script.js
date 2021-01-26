@@ -12,63 +12,61 @@ window.addEventListener("scroll", () => {
 });
 
 
-const callFetch = function () {
-  const API_KEY = "92bcc12799d8068995c7c9650f414f3e";
-  addTvShows(API_KEY);
+const alreadyDisplayed = [];
+
+const getPopular = function () {
+  const popularURL = "https://api.themoviedb.org/3/discover/tv?api_key=92bcc12799d8068995c7c9650f414f3e&sort_by=vote_average.desc&vote_count.gte=5000";
+  callFetch(popularURL, "popular");
 }
 
-const addTvShows = function (API_KEY) {
-  fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=5000`)
+const getTrending = function () {
+  const trendingURL = "https://api.themoviedb.org/3/trending/tv/week?api_key=92bcc12799d8068995c7c9650f414f3e";
+  callFetch(trendingURL, "trending")
+}
+
+const callFetch = function (URL, id) {
+  console.log(URL);
+  fetch(URL)
     .then(response => {
-      // console.log(response);
-      if (response.ok) {
-        return response.json();
-      } else {
+      if (!response.ok) {
         throw new Error("Something went wrong")
+      } else {
+        return response.json();
       }
     })
     .then(data => {
-      // console.log(data);
-      displayTvShows(data);
+      displayMovies(data, id);
     })
     .catch(error => {
       console.log(error);
     });
 }
 
-const displayTvShows = function (tvShows) {
-  const tvShowsEl = document.getElementById("tvShows");
-  tvShows.results.forEach(tvShow => {
-    const imgHtml = `<img src="https://image.tmdb.org/t/p/original${tvShow.backdrop_path}" alt="${tvShow.original_name}">`;
-    tvShowsEl.innerHTML += imgHtml;
+// Check if a movie is already displayed
+const movieIsNotDisplayed = function (movieID) {
+  // push movie_id in the array when is NOT DISPLAYED
+  if (!alreadyDisplayed.includes(movieID)) {
+    alreadyDisplayed.push(movieID);
+    return true; // When the movie is not in the [alreadyDisplayed] array
+  }
+  return false; // When the movie is already displayed
+}
+
+const displayMovies = function (data, id) {
+  const containerEL = document.getElementById(id);
+
+  data.results.forEach(movie => {
+    if (movieIsNotDisplayed(movie.id)) {
+      const imageEl = ` <img src="https://image.tmdb.org/t/p/original/${movie.backdrop_path}" alt="${id}">`;
+      containerEL.innerHTML += imageEl;
+    }
   });
-}
-
-const findGenreID = function (genre_name) {
-  fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=92bcc12799d8068995c7c9650f414f3e&language=en-US`)
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error("Something went wrong!");
-      }
-
-    })
-    .then(data => {
-      // console.log(data);
-      const genre_obj = data.genres.filter(genre => genre.name === genre_name);
-      console.log(genre_obj);
-    })
-    .catch(error => {
-      console.log(error);
-    })
-}
+  console.log(alreadyDisplayed);
+};
 
 
-// function calls
-callFetch();
-findGenreID("Drama");
+getPopular();
+getTrending();
 
-// Giving back the GENRES
 //  https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>&language=en-US
 

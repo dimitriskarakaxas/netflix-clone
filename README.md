@@ -18,7 +18,7 @@ This project is the **Front-end** of the *NETFLIX*. We try to make it as much as
 ***
 
 ### You can view the Demo Live!
-> Just click -->> **[Netflix Clone](https://dimitriskarakaxas.github.io/netflix-clone/ "Netfix Clone")**
+Just click -->> **[Netflix Clone](https://dimitriskarakaxas.github.io/netflix-clone/ "Netfix Clone")**
 
 
 

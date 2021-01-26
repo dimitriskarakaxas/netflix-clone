@@ -12,8 +12,8 @@ This project is the **Front-end** of the *NETFLIX*. We try to make it as much as
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ### Contributors
-**Dimitris Karakaxas** --> [Github](https://github.com/dimitriskarakaxas)
-**Saddam Arbaa** --> [Github](https://github.com/CodeWithSaddam)
+> Dimitris Karakaxas --> [Github](https://github.com/dimitriskarakaxas "Dimitris Karakaxas")   
+> Saddam Arbaa --> [Github](https://github.com/CodeWithSaddam "Saddam Arbaa") 
 
 ***
 

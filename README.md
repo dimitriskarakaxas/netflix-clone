@@ -11,8 +11,15 @@ This project is the **Front-end** of the *NETFLIX*. We try to make it as much as
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-#### You can view the Demo Live!
-Click **[here](https://dimitriskarakaxas.github.io/netflix-clone/ "Netfix Clone")**
+### Contributors
+**Dimitris Karakaxas** --> [Github](https://github.com/dimitriskarakaxas)
+**Saddam Arbaa** --> [Github](https://github.com/CodeWithSaddam)
+
+***
+
+### You can view the Demo Live!
+> Just click -->> **[Netflix Clone](https://dimitriskarakaxas.github.io/netflix-clone/ "Netfix Clone")**
+
 
 
 

@@ -12,25 +12,54 @@
 
 <body>
 
-  <!-- Header -->
-  <header id="navigation" class="spacing-left">
-    <img class="logo" src="./img/Netflix-Logo.png" alt="">
+  <!-- Header / Navigation -->
+  <header class="navigation">
+    <img class="logo" src="./img/Netflix-Logo.png" alt="website logo">
 
-    <!-- Navigations -->
-    <ul class="main-menu">
-      <li class="main-menu__item"><a class="active" href="#">Home</a></li>
-      <li class="main-menu__item"><a href="#">TV Shows</a></li>
-      <li class="main-menu__item"><a href="#">Movies</a></li>
-      <li class="main-menu__item"><a href="#">New & Popular</a></li>
-      <li class="main-menu__item"><a href="#">My List</a></li>
+    <!-- Main Menu -->
+    <ul class="navigation__mainMenu">
+      <li class="navigation__mainMenu-item">
+        <a class="navigation__mainMenu-link mainMenu-link--active" href="#">Home</a>
+      </li>
+      <li class="navigation__mainMenu-item">
+        <a class="navigation__mainMenu-link" href="#">TV Shows</a>
+      </li>
+      <li class="navigation__mainMenu-item">
+        <a class="navigation__mainMenu-link" href="#">Movies</a>
+      </li>
+      <li class="navigation__mainMenu-item">
+        <a class="navigation__mainMenu-link" href="#">New & Popular</a>
+      </li>
+      <li class="navigation__mainMenu-item">
+        <a class="navigation__mainMenu-link" href="#">My List</a>
+      </li>
     </ul>
-    <ul class="secondary-menu">
-      <li class="secondary-menu__item"><button><i class="fas fa-search"></i></button></li>
-      <li class="secondary-menu__item"><button><a class="kids" href="#">kids</a></button></li>
-      <li class="secondary-menu__item"><button><i class="fas fa-gift"></i></button></li>
-      <li class="secondary-menu__item"><button><i class="fas fa-bell"></i></button></li>
-      <li class="secondary-menu__item profile-icon">
-        <button href="#">
+    <!-- / Main Menu -->
+
+    <!-- Secondary Menu -->
+    <ul class="navigation__secondaryMenu">
+      <li class="navigation__secondaryMenu-item">
+        <button class="navigation__secondaryMenu-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </li>
+      <li class="navigation__secondaryMenu-item">
+        <button class="navigation__secondaryMenu-btn">
+          <a class="secondaryMenu-kidsLink" href="#">kids</a>
+        </button>
+      </li>
+      <li class="navigation__secondaryMenu-item">
+        <button class="navigation__secondaryMenu-btn">
+          <i class="fas fa-gift"></i>
+        </button>
+      </li>
+      <li class="navigation__secondaryMenu-item">
+        <button class="navigation__secondaryMenu-btn">
+          <i class="fas fa-bell"></i>
+        </button>
+      </li>
+      <li class="navigation__secondaryMenu-item">
+        <button class="navigation__secondaryMenu-btn navigation__secondaryMenu-btnProfile">
           <img
             src="https://occ-0-3633-2706.1.nflxso.net/dnm/api/v6/0RO1pLmU93-gdXvuxd_iYjzPqkc/AAAABRLIW5ni1fjn2M8-RvajSSJDYzNpakEjTQUMOzZXMubSaOI_5gWM3NMuONGFltTny9wBh2dLTe0ViMw-pN9-HPk.png?r=d36"
             alt="">
@@ -59,10 +88,11 @@
         </div>
       </li>
     </ul>
+    <!-- / Secondary Menu -->
   </header>
 
   <!-- Featured Movie Section -->
-  <div class="featured spacing-left">
+  <!-- <div class="featured spacing-left">
     <h1 class="featured__title" style="color: bisque;">
       FATE
       <br>
@@ -88,11 +118,11 @@
         <span class="age">16+</span>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- My List Section  -->
 
-  <div class="my-list spacing-left">
+  <!-- <div class="my-list spacing-left">
     <h2>My List</h2>
     <div class="movie-container basic-movies">
       <img
@@ -123,31 +153,31 @@
         src="https://occ-0-3633-2706.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTrMexuKLlw1dlS72IpQ0UxuVKQywj3htz8VLXT0xKK4oh6GWENHFhAp3kNJEd-KEUUuG9fNbDBj7kK9tNurM4AearmoYkhsWq1NRQiSrGtR7PW7JqEbOnP2B9KZpvkUmDmK9r0bUbBgrIyMnUEQoyG0-xig0w.jpg?r=15e"
         alt="">
     </div>
-  </div>
+  </div> -->
 
 
   <!-- Popular on Netflix  -->
-
+  <!-- 
   <div class="movie-section spacing-left">
     <h2>Popular on Netflix</h2>
     <div class="movie-container basic-movies" id="popular">
       <!-- Inserted with JavaScript -->
-    </div>
-  </div>
+  <!-- </div>
+  </div> -->
 
   <!-- Trending Now -->
 
-  <div class="movie-section spacing-left">
+  <!-- <div class="movie-section spacing-left">
     <h2>Trending Now</h2>
     <div class="movie-container basic-movies" id="trending">
       <!-- Inserted with JavaScript -->
-    </div>
-  </div>
+  <!-- </div> -->
+  <!-- </div> -->
 
 
   <!-- Netflix Orginal Section  -->
 
-  <div class="movie-section spacing-left">
+  <!-- <div class="movie-section spacing-left">
     <h2>Netflix Original</h2>
     <div class="movie-container big-movies">
       <img
@@ -169,9 +199,9 @@
         src="https://occ-0-3633-2706.1.nflxso.net/dnm/api/v6/ifCRgpXJMAE_puF509EDR7a7mqU/AAAABY885OGaao3ecrxAAguDMHnonb0TNbDr-aYT_U8un6moAh3UQxgeXl_TWpgj6ihL8KaibRr56zj-xAbO3hEpAh7iyoY-j4x1Co9PvMBD3uIgel_iTy01PAWZorXwEnh5Ss0YcggwW7X-54WkttZpfuQ0FrZSIB4eg_wA8Pd6KitK2XX_6bD8qJGKgEO0m5s9GnCAjCmq.jpg?r=73f"
         alt="">
     </div>
-  </div>
+  </div> -->
 
 
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 </body>

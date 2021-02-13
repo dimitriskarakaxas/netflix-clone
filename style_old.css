@@ -1,0 +1,384 @@
+/********** Generic Styles **********/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background: #141414;
+}
+
+h2 {
+  font-size: 1.4vw;
+  color: #fff;
+  margin-bottom: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/********** Start Header Section **********/
+
+.logo {
+  width: 100px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0)
+  );
+  height: 68px; /* review */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* transition is added with JavaScript */
+  z-index: 15;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main-menu__item {
+  margin-right: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.main-menu {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.main-menu a {
+  color: #e5e5e5;
+  transition: color 0.4s;
+}
+
+.main-menu a:hover {
+  color: #b3b3b3;
+}
+
+.main-menu .main-menu__item .active {
+  color: #fff;
+  font-weight: 700;
+  cursor: default;
+}
+
+.secondary-menu {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2.75vw;
+  color: #fff;
+}
+
+.secondary-menu__item {
+  margin-left: 1.75rem;
+}
+
+.secondary-menu button {
+  font-size: 1.2rem;
+  background: transparent;
+  color: inherit;
+}
+
+.kids {
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.secondary-menu__item i {
+  font-size: 22px;
+}
+
+.secondary-menu__item img {
+  border-radius: 4px;
+}
+
+.profile-icon button {
+  padding-right: 8px;
+}
+
+.profile-icon button::after {
+  content: "";
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Dropdowns */
+.profile-icon {
+  position: relative;
+}
+
+.dropdown-container {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s ease;
+}
+
+.dropdown-content {
+  position: relative;
+  background: rgba(0, 0, 0, 0.85);
+  width: 175px;
+  border: 1px solid rgb(100, 100, 100);
+}
+
+.dropdown-content li {
+  margin-bottom: 14px;
+}
+
+.profiles,
+.account {
+  padding: 15px 15px 0;
+}
+
+.profiles {
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgb(100, 100, 100);
+}
+
+.profiles li:last-child {
+  margin-bottom: 20px;
+}
+
+.account {
+  font-size: 0.775rem;
+  font-weight: 700;
+}
+
+.account li:first-child {
+  margin-top: 5px;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: -18px;
+  border-width: 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.profile-icon:hover .dropdown-container {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width:1200px){
+  .main-menu__item{
+    font-size:0.7rem;
+  }
+
+  .secondary-menu__item i {
+    font-size: 16px;
+  }
+}
+
+/********** Start Featured Section  **********/
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  background: #000
+    url("https://occ-0-3633-2706.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABTe_aG5bSenJ76kFXNIVuqejdtqsh4Vy6FwnWPpTRNBpQuMfPNZ2tkBWxXZnvnOjTszhQlvwx9p5uH3o_DOg1rV9GkYp.jpg?r=9b2")
+    no-repeat center center/cover;
+  height: 50vw;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+.featured::before {
+  content: "";
+  background: linear-gradient(
+    77deg,
+    rgba(0, 0, 0, 0.6) 0,
+    rgba(0, 0, 0, 0) 85%
+  );
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/********** Fixing .featured::before+::after problems **********/
+
+.featured__title,
+.featured__description,
+.featured-bottoms,
+.my-list {
+  z-index: 5;
+}
+
+.my-list {
+  position: relative;
+}
+
+.featured::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6vw;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+}
+
+.featured__title {
+  font-size: 7.5vw;
+  text-transform: uppercase;
+  /* text-align: center; */
+  /* width: min-content; */
+  letter-spacing: 12px;
+  line-height: 0.3;
+}
+
+.featured__description {
+  width: 40%;
+  font-size: 1.5vw;
+  margin: 3vw 0;
+  line-height: 1.35;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+}
+
+.featured-bottoms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-btns button {
+  padding: 0.5vw 1.2vw;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1vw;
+}
+
+.play {
+  background: #fff;
+  color: #000;
+  margin-right: 10px;
+}
+
+.play:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.more-info {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: #fff;
+}
+
+.more-info:hover {
+  background-color: rgba(109, 109, 110, 0.5);
+}
+
+.left-btns button i {
+  margin-right: 8px;
+}
+
+.age {
+  background-color: rgba(51, 51, 51, 0.6);
+  padding: 0.5vw 3.5vw 0.5vw 0.8vw;
+  font-size: 1.1vw;
+  height: 2.4vw;
+  border-left: 3px solid #dcdcdc;
+  margin-left: 10px;
+}
+
+.repeat {
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  color: #dcdcdc;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  font-size: 1vw;
+}
+
+.repeat:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/**********  Movies Section **********/
+
+.my-list {
+  margin-top: -8vw;
+}
+
+.movie-container {
+  white-space: nowrap;
+  overflow: scroll;
+  overflow-y: hidden;
+}
+
+.movie-section {
+  margin-top: 3.5vw;
+}
+
+.movie-container img {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.netflixOriginal-container img {
+  height: 100%;
+}
+
+.basic-movies {
+  height: 11.5vw;
+}
+
+.big-movies {
+  height: 35vw;
+}
+
+/*.movie-container img:hover {
+  transform: scale(1.3);  review 
+}*/
+
+/* ////////////////
+       Framework
+   /////////////// */
+
+.spacing-left {
+  padding-left: 2.75vw;
+}

@@ -105,9 +105,13 @@ ul {
     font-size: 0.9rem;
 }
 
+.navigation__secondaryMenu-item:last-child > button,
+.navigation__secondaryMenu-item:last-child button img {
+    display: block;
+}
+
 .navigation__secondaryMenu-item:last-child img {
     border-radius: 4px;
-    /* display: block; */
 }
 
 .navigation__secondaryMenu-item:last-child {
@@ -143,7 +147,7 @@ ul {
 
 .btnProfile__dropdown-content {
     background-color: rgba(0, 0, 0, 0.8);
-    width: 10.938rem; 
+    width: 11.5rem; 
     border: 1px solid rgb(100, 100, 100);
     font-size: 0.85rem; 
     margin-top: 1.4rem;
@@ -164,6 +168,9 @@ ul {
     padding: 0.75rem;
 }
 
+.btnProfile__dropdown-content > * + * {
+    border-top: 1px solid rgb(100, 100, 100);
+}
 
 .profile-link {
     display: flex;
@@ -176,21 +183,8 @@ ul {
     margin-left: 0.5rem;
 }
 
-.btnProfile__dropdown-content > * + * {
-    border-top: 1px solid rgb(100, 100, 100);
-}
-
-.btnProfile__dropdown-content a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.btnProfile__dropdown-content a:hover {
-text-decoration: underline;
-}
-
 .btnProfile__dropdown-account ul li{
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     font-weight: 700;
 }
 
@@ -200,6 +194,21 @@ text-decoration: underline;
 
 .navigation__secondaryMenu-item:last-child:hover .btnProfile__dropdown {
     display: block;
+}
+
+.btnProfile__dropdown-kids {
+    display: none;
+    text-transform: capitalize;
+
+}
+
+.btnProfile__dropdown-content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btnProfile__dropdown-content a:hover {
+text-decoration: underline;
 }
 
 @media (max-width: 74.9375em){
@@ -218,18 +227,38 @@ text-decoration: underline;
     .navigation__secondaryMenu-item:nth-child(2) {
         display: none;
     }
+
+	.btnProfile__dropdown-kids {
+		display: block;
+	}
+}
+
+@media(max-width: 59.3125em) {
+    .navigation {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .navigation__secondaryMenu-btnProfile::after {
         display: none;
     }
-        display: none;
+
+    .navigation__mainMenu-item {
+        font-size: 0.63rem;
     }
-        display: none;
+
+    .navigation__secondaryMenu-item > button {
+        font-size: 0.9rem;
     }
-        display: none;
-    }
-        display: none;
-    }
-        display: none;
-    }
+
+}
+
+@media (min-width: 55.25em) {
+
 }
 
 

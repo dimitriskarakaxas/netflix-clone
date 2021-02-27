@@ -106,7 +106,73 @@ ul {
 
 .navigation__mainMenu-item:last-child {
     display: none;
+    position: relative;
 }
+
+
+/* =======> button Browse Dropdown Menu */
+.btnBrowse__dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: translateX(50%);
+    display: none;
+    
+}
+
+.btnBrowse__dropdown-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgb(100, 100, 100);
+    width: 15rem;
+    position: relative;
+    text-align:center;
+    margin-top: 2rem;
+}
+
+.btnBrowse__dropdown-content::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translateY(-50%);
+}
+
+.btnBrowse__dropdown-content::after{
+    content: "";
+    border-left : 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    position:absolute;
+    top:0;
+    transform:translate(-50%,-115%);
+    left: 50%;
+}
+
+
+
+.btnBrowse__dropdown-content a {
+    font-size: 0.9rem;
+    display: block;
+    width: 100%;
+    color: #e5e5e5;
+    text-decoration: none;
+    padding: 0.9rem 0;
+}
+
+.btnBrowse__dropdown-content a:hover{
+    background-color: rgba(255,255,255, 0.05);
+}
+
+.navigation__mainMenu-item:last-child:hover .btnBrowse__dropdown {
+    display: block;
+}
+
+
+
+
 
 
 .navigation__secondaryMenu {
@@ -162,8 +228,8 @@ ul {
     right: 0;
 }
 
-/* ===> Dropdowns  */
 
+/* ===> button Profile Dropdown Menu */
 
 .btnProfile__dropdown {
     position: absolute;
@@ -204,7 +270,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
 }
 
 .profile-link span {
@@ -269,6 +335,10 @@ text-decoration: underline;
 
     .logo {
         width: 70px;
+    }
+    
+    .navigation__secondaryMenu-btnProfile {
+        padding: 0;
     }
 
     .navigation__secondaryMenu-btnProfile::after {

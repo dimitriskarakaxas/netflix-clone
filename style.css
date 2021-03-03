@@ -368,7 +368,7 @@ ul {
 
 
 .hero {
-    background: url(/img/featured_movie.jpg) no-repeat center center/cover;
+    background: url(img/featured_movie.jpg) no-repeat center center/cover;
     height: 50vw;
     display: flex;
     flex-direction: column;
@@ -385,6 +385,7 @@ ul {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
     margin: 2vw 0;
     width: 33%;
+    line-height: 1.2;
 }
 
 .hero__buttons {

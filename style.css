@@ -45,8 +45,11 @@ ul {
 .navigation {
     display: flex;
     align-items: center;
-    background-color: rgb(20, 20, 20);
+    background-color: transparent;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .7) 10%, rgba(0, 0, 0, 0));
     padding: 0.4rem 2.75vw;
+    position: fixed;
+    width: 100%;
 }
 
 .logo {
@@ -365,11 +368,9 @@ ul {
     }
 }
 
-
-
 .hero {
     background: url(img/featured_movie.jpg) no-repeat center center/cover;
-    height: 50vw;
+    height: 47vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -401,17 +402,69 @@ ul {
     margin-right: 0.8vw;
 }
 
-.left-btn--white {
-    background-color: #fff;
+.left-btn--play {
+    background: #fff;
     color: #000;
 }
 
-.left-btn--dark {
-    background-color: #515151;
+.left-btn--info {
+    background: rgba(109, 109, 110, 0.7);
     color: #fff;
 }
 
 .left-btn>i {
     font-size: 1.3vw;
-    margin-right: 0.6rem;
+    margin-right: 0.8vw;
+}
+
+.left-btn--play:hover {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.left-btn--info:hover {
+    background: rgba(109, 109, 110, 0.4);
+}
+
+.hero__buttons-right {
+    display: flex;
+    align-items: center;
+}
+
+.right-btn {
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    width: 2.5vw;
+    height: 2.5vw;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-btn i {
+    font-size: 1vw;
+}
+
+.right-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.maturity-rating {
+    background-color: rgba(51, 51, 51, 0.6);
+    color: #fff;
+    font-size: 1.1vw;
+    border-left: 3px solid #dcdcdc;
+    padding: .5vw 3.5vw .5vw .8vw;
+    height: 2.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.25vw;
+}
+
+@media (max-width: 43.75em) {
+    .left-btn {
+        border-radius: 2px;
+    }
 }

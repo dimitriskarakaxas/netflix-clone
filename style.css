@@ -370,7 +370,7 @@ ul {
 
 .hero {
     background: url(img/featured_movie.jpg) no-repeat center center/cover;
-    height: 47vw;
+    height: 56.25vw;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -384,7 +384,7 @@ ul {
     font-size: 1.4vw;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
-    margin: 2vw 0;
+    margin: 1.75vw 0;
     width: 33%;
     line-height: 1.2;
 }
@@ -467,4 +467,19 @@ ul {
     .left-btn {
         border-radius: 2px;
     }
+}
+
+.container-img {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 12vw;
+}
+
+.container-img img {
+    height: 100%;
+}
+
+.popular-movies__title {
+    color: #fff;
 }

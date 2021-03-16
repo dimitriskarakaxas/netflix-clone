@@ -50,6 +50,7 @@ ul {
     padding: 0.4rem 2.75vw;
     position: fixed;
     width: 100%;
+    transition: background 0.3s ease-in;
 }
 
 .logo {

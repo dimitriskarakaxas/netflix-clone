@@ -1,4 +1,14 @@
 const navigationEl = document.querySelector('.navigation');
+console.log(navigationEl);
+window.addEventListener("scroll", () => {
+    console.log(document.body.scrollTop, document.documentElement.scrollTop);
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        navigationEl.style.background = "rgba(20, 20, 20, 1)";
+    } else {
+        // console.log("back to the top");
+        navigationEl.style.background = "linear-gradient(to bottom, rgba(0, 0, 0, .7) 10%, rgba(0, 0, 0, 0))";
+    }
+})
 
 const displayedMovies = [];
 
@@ -32,7 +42,6 @@ const displayMovies = (data, id) => {
         }
     })
 }
-
 
 const alreadyDisplayed = (imgID) => {
     if (!displayedMovies.includes(imgID)) {
